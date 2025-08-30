@@ -1,7 +1,6 @@
-// App.tsx - Alternative with Google Fonts
 import React from 'react';
 import { View } from 'react-native';
-import { 
+import {
   useFonts,
   Syne_400Regular,
   Syne_700Bold,
@@ -13,10 +12,9 @@ import {
   Poppins_700Bold,
 } from '@expo-google-fonts/poppins';
 import * as SplashScreen from 'expo-splash-screen';
-import { CreatorListScreen } from './screens/CreatorListScreen';
-import './global.css';
+import './src/styles/global.css';
+import { RootNavigator } from './src/navigation/RootNavigator';
 
-// Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
 
 const App = () => {
@@ -41,9 +39,10 @@ const App = () => {
 
   return (
     <View style={{ flex: 1 }}>
-      <CreatorListScreen />
+      <RootNavigator />
     </View>
   );
 };
 
 export default App;
+

@@ -1,10 +1,10 @@
 // src/screens/CreatorListScreen.tsx
 import React from 'react';
 import { View, ScrollView, SafeAreaView, StatusBar, Alert } from 'react-native';
-import { CustomStatusBar } from '../components/StatusBar';
-import { Header } from '../components/Header';
-import { CreatorCard } from '../components/CreatorCard';
-import { useCreators } from '../hooks/useCreators';
+import { CustomStatusBar } from '../../components/StatusBar';
+import { Header } from '../../components/Header';
+import { CreatorCard } from '../../components/CreatorCard';
+import { useCreators } from '../../hooks/useCreators';
 
 export const CreatorListScreen = () => {
   const { creators, removeCreator, getCreatorCount } = useCreators();
@@ -35,7 +35,7 @@ export const CreatorListScreen = () => {
   return (
     <SafeAreaView className="flex-1 bg-black">
       <StatusBar barStyle="light-content" backgroundColor="black" />
-      
+
       {/* Status Bar */}
       <CustomStatusBar />
 
@@ -47,7 +47,7 @@ export const CreatorListScreen = () => {
       />
 
       {/* Creator List */}
-      <ScrollView 
+      <ScrollView
         className="flex-1 px-6"
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 20 }}
@@ -61,10 +61,7 @@ export const CreatorListScreen = () => {
         ))}
       </ScrollView>
 
-      {/* Home Indicator */}
-      <View className="h-10 justify-center items-center bg-black">
-        <View className="w-[151px] h-1.5 bg-white rounded-full" />
-      </View>
+
     </SafeAreaView>
   );
 };

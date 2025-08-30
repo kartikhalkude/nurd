@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global React Native styling via NativeWind */
+:root {
+    --background: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffffb2;
+    --text-muted: #999999;
+}
